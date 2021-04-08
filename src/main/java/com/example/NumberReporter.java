@@ -2,6 +2,10 @@ package com.example;
 
 public class NumberReporter {
     public static String report(int number) {
+        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
+            return "FizzBuzzWhizz";
+        }
+
         if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         }

@@ -27,17 +27,22 @@ public class NumberReporterTest {
     }
 
     @Test
-    public void should_return_fizzbuzz_when_report_given_number_divided_3_and_5() {
+    public void should_return_fizz_buzz_when_report_given_number_divided_3_and_5() {
         assertEquals(NumberReporter.report(15), "FizzBuzz");
     }
 
     @Test
-    public void should_return_fizzwhizz_when_report_given_number_divided_3_and_7() {
+    public void should_return_fizz_whizz_when_report_given_number_divided_3_and_7() {
         assertEquals(NumberReporter.report(21), "FizzWhizz");
     }
 
     @Test
-    public void should_return_buzzwhizz_when_report_given_number_divided_5_and_7() {
+    public void should_return_buzz_whizz_when_report_given_number_divided_5_and_7() {
         assertEquals(NumberReporter.report(35), "BuzzWhizz");
+    }
+
+    @Test
+    public void should_return_fizz_buzz_whizz_when_report_given_number_divided_3_and_5_and7() {
+        assertEquals(NumberReporter.report(105), "FizzBuzzWhizz");
     }
 }

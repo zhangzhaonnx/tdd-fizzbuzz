@@ -2,38 +2,29 @@ package com.example;
 
 public class NumberReporter {
     public static String report(int number) {
-        if (String.valueOf(number).contains("3")) {
+        if (includeX(number, 3)) {
             return "Fizz";
         }
 
-        if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
-            return "FizzBuzzWhizz";
+        StringBuilder result = new StringBuilder();
+        if (dividedX(number, 3)) {
+            result.append("Fizz");
+        }
+        if (dividedX(number, 5)) {
+            result.append("Buzz");
+        }
+        if (dividedX(number, 7)) {
+            result.append("Whizz");
         }
 
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
-        }
+        return result.toString().isEmpty() ? String.valueOf(number) : result.toString();
+    }
 
-        if (number % 3 == 0 && number % 7 == 0) {
-            return "FizzWhizz";
-        }
+    private static boolean dividedX(int number, int x) {
+        return number % x == 0;
+    }
 
-        if (number % 5 == 0 && number % 7 == 0) {
-            return "BuzzWhizz";
-        }
-
-        if (number % 3 == 0) {
-            return "Fizz";
-        }
-
-        if (number % 5 == 0) {
-            return "Buzz";
-        }
-
-        if (number % 7 == 0) {
-            return "Whizz";
-        }
-
-        return String.valueOf(number);
+    private static boolean includeX(int number, int x) {
+        return String.valueOf(number).contains(String.valueOf(x));
     }
 }

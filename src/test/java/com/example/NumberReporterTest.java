@@ -38,11 +38,36 @@ public class NumberReporterTest {
 
     @Test
     public void should_return_buzz_whizz_when_report_given_number_divided_5_and_7() {
-        assertEquals(NumberReporter.report(35), "BuzzWhizz");
+        assertEquals(NumberReporter.report(70), "BuzzWhizz");
     }
 
     @Test
     public void should_return_fizz_buzz_whizz_when_report_given_number_divided_3_and_5_and7() {
         assertEquals(NumberReporter.report(105), "FizzBuzzWhizz");
+    }
+
+    @Test
+    public void should_return_fizz_when_report_given_number_include_3() {
+        assertEquals(NumberReporter.report(13), "Fizz");
+    }
+
+    @Test
+    public void should_return_fizz_when_report_given_number_include_3_divided_3_and_5() {
+        assertEquals(NumberReporter.report(30), "Fizz");
+    }
+
+    @Test
+    public void should_return_fizz_when_report_given_number_include_3_divided_3_and_7() {
+        assertEquals(NumberReporter.report(63), "Fizz");
+    }
+
+    @Test
+    public void should_return_fizz_when_report_given_number_include_3_divided_5_and_7() {
+        assertEquals(NumberReporter.report(35), "Fizz");
+    }
+
+    @Test
+    public void should_return_fizz_when_report_given_number_include_3_divided_3_and_5_and_7() {
+        assertEquals(NumberReporter.report(315), "Fizz");
     }
 }

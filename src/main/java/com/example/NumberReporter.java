@@ -2,6 +2,10 @@ package com.example;
 
 public class NumberReporter {
     public static String report(int number) {
+        if (String.valueOf(number).contains("3")) {
+            return "Fizz";
+        }
+
         if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
             return "FizzBuzzWhizz";
         }
